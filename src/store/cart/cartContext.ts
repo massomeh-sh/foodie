@@ -10,5 +10,7 @@ export const CartContext = createContext<CartContextValue>({
     increaseItem: () => {
     },
     decreaseItem: () => {
+    },
+    clearCartItems: () => {
     }
 });
