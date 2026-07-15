@@ -18,11 +18,11 @@ function CartItem({name, quantity, image, price, id}: CartItemProps): JSX.Elemen
     const {increaseItem, decreaseItem, removeFromCart} = useContext(CartContext);
 
     return (
-        <div className="grid grid-cols-[1fr_2fr_1fr] gap-x-8 font-semibold">
-            <img src={image} alt={name} className="object-cover rounded-lg w-32 h-32"/>
+        <div className="grid grid-cols-[2fr_2fr_1fr] lg:grid-cols-[100px_auto_auto] gap-x-8 font-semibold">
+            <img src={image} alt={name} className="object-cover rounded-lg w-full h-full"/>
             <div className="text-lg flex flex-col gap-4.5">
-                <p>{name}</p>
-                <p className="text-sm">{currencyFormatter.format(price)}</p>
+                <p className="lg:text-2xl">{name}</p>
+                <p className="text-sm lg:text-lg">{currencyFormatter.format(price)}</p>
                 <div className="flex gap-6 items-center border-2 border-border px-4 py-1 w-fit rounded-2xl">
                     <button onClick={() => decreaseItem(id)} className="cursor-pointer">-</button>
                     <p>{quantity}</p>
@@ -30,7 +30,7 @@ function CartItem({name, quantity, image, price, id}: CartItemProps): JSX.Elemen
                 </div>
             </div>
             <Icon icon={MdOutlineDelete} handleClick={() => removeFromCart(id)}
-                  className="self-center justify-self-end text-gray-500 cursor-pointer font-bold"/>
+                  className="self-center justify-self-end text-gray-500 cursor-pointer font-bold text-3xl lg:text-4xl"/>
         </div>
     );
 }

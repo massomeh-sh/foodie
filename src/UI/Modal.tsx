@@ -21,7 +21,7 @@ function Modal({children, open, close}: ModalProps): JSX.Element {
     }, [open]);
 
     return (createPortal(<dialog onClose={close}
-                                 className="m-auto w-full max-w-lg max-h-3/4 scrollbar-none rounded-xl p-10 shadow-2xl border border-gray-200 bg-white outline-none backdrop:bg-black/60 backdrop:backdrop-blur-xs backdrop:h-screen"
+                                 className="m-auto w-full max-w-2xl md:max-w-2/5  max-h-3/4 scrollbar-none rounded-xl p-10 shadow-2xl border border-gray-200 bg-white outline-none backdrop:bg-black/60 backdrop:backdrop-blur-xs backdrop:h-screen"
                                  ref={modalRef}>{children}</dialog>, document.getElementById("modal")!))
 }
 

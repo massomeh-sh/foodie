@@ -10,8 +10,8 @@ function FoodItems(): JSX.Element {
     const {foodItems, isLoading, error} = useContextValue(FoodContext);
 
     return (
-        <div className="mt-5 flex flex-col gap-8">
-            <h3 className="font-bold text-2xl">Popular Dishes</h3>
+        <div className="mt-5 flex flex-col gap-8 md:grid md:grid-cols-4 xl:grid-cols-5 md:gap-10">
+            <h3 className="font-bold text-2xl md:text-3xl md:col-span-4 xl:col-span-5">Popular Dishes</h3>
             {isLoading ? (Array.from({length: 8}).map((_, index) => (<FoodCardSkeleton key={index}/>)))
                 : foodItems.map((food: FoodItem) => <FoodCard key={food.id} {...food}/>)}
             {foodItems.length === 0 && !isLoading && !error &&

@@ -17,7 +17,7 @@ function App() {
             <FoodProvider>
                 <CartProvider>
                     <Header/>
-                    <main className="flex flex-col gap-6 px-12 pb-7 min-h-screen">
+                    <main className="flex flex-col gap-6 px-12 lg:px-40 pb-7 md:pb-10 min-h-screen">
                         <ImageSlider/>
                         <Icon icon={Categories} className="text-primary"/>
                         <FoodItems/>

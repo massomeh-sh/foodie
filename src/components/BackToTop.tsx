@@ -24,8 +24,8 @@ function BackToTop(): JSX.Element {
         <>
             {showButton &&
                 <button onClick={backToTop}>
-                    <Icon icon={MdKeyboardArrowUp} size={30}
-                          className="fixed bottom-6 right-6"/>
+                    <Icon icon={MdKeyboardArrowUp}
+                          className="fixed bottom-6 right-5 md:right-12 text-4xl md:text-5xl lg:text-6xl"/>
                 </button>
             }
         </>

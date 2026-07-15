@@ -16,13 +16,13 @@ function CartModal(): JSX.Element {
 
     return (
         <Modal open={progress === "cart"} close={progress === "cart" ? hideCart : undefined}>
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-5">
                 <div className="flex justify-between">
-                    <p className="font-semibold">Your Cart</p>
-                    <Icon icon={IoMdClose} handleClick={hideCart} className="cursor-pointer"/>
+                    <p className="font-semibold text-2xl">Your Cart</p>
+                    <Icon icon={IoMdClose} handleClick={hideCart} className="cursor-pointer text-3xl md:text-4xl"/>
                 </div>
                 <div className="border border-border"/>
-                {cartItems.length === 0 ? <p>Your cart is currently empty. Try add some food! 😃👇</p> :
+                {cartItems.length === 0 ? <p className="text-lg">Your cart is currently empty. Try add some food! 😃</p> :
                     <>
                         <ul className="flex flex-col gap-6">
                             {cartItems.map((item) => (<CartItem key={item.id} {...item}/>))}

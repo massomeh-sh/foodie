@@ -33,7 +33,7 @@ const categoryItems: CategoriesItems[] = [
 function Categories(): JSX.Element {
     return (
         <div className="flex flex-col gap-8">
-            <h1 className="font-bold text-2xl">Categories</h1>
+            <h1 className="font-bold text-2xl md:text-3xl">Categories</h1>
             <div className="flex justify-between">
                 {categoryItems.map((item: CategoriesItems) => (<CategoryItem key={item.name} {...item}/>))}
             </div>

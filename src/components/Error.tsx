@@ -9,9 +9,9 @@ interface ErrorProps {
 
 function Error({message}: ErrorProps): JSX.Element {
     return (
-        <div className={`flex gap-2 justify-center items-center mt-30 text-sm`}>
-            <TbFaceIdError size={20}/>
-            <p className="whitespace-pre-line ml-2">{message}</p>
+        <div className={`flex gap-2 items-center justify-center content-start my-30 text-sm md:self-center md:justify-items-center`}>
+            <TbFaceIdError className="text-3xl md:text-5xl"/>
+            <p className="whitespace-pre-line ml-2 md:text-lg">{message}</p>
         </div>
     );
 }

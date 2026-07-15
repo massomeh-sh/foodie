@@ -48,12 +48,12 @@ function CheckoutModal(): JSX.Element {
         <Modal open={progress === "checkout"} close={progress === "checkout" ? hideCheckout : undefined}>
             <div className="flex flex-col gap-8">
                 <div className="flex gap-6 items-center">
-                    <Icon icon={LuMoveLeft} handleClick={handleCloseCheckout} className="cursor-pointer"/>
+                    <Icon icon={LuMoveLeft} handleClick={handleCloseCheckout} className="cursor-pointer text-3xl md:text-4xl"/>
                     <p className="font-semibold">Checkout</p>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
                     <fieldset>
-                        <legend className="font-semibold mb-6">Delivery Information</legend>
+                        <legend className="font-semibold mb-6 md:text-3xl">Delivery Information</legend>
                         <Input {...register("fullName", {
                             required: "Full-name is required", minLength: {
                                 value: 3, message: "Full-name must be at least 3 characters"
@@ -87,8 +87,8 @@ function CheckoutModal(): JSX.Element {
                                id="full-name" autoComplete="tel"
                                placeholder="Enter your phone number"/>
                     </fieldset>
-                    <p className="font-semibold">Order Summary</p>
-                    <ul className="flex flex-col gap-3 text-lg">
+                    <p className="font-semibold md:text-3xl">Order Summary</p>
+                    <ul className="flex flex-col gap-3 text-lg md:text-2xl">
                         {cartItems.map((item: CartItemType) => (
                             <div key={item.id} className="flex justify-between"><p>{item.name} <span
                                 className="text-primary font-semibold">x{item.quantity}</span></p>

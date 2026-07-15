@@ -9,7 +9,7 @@ interface IconProps {
     handleClick?: () => void;
 }
 
-function Icon({icon: Icon, size = 22, className, handleClick}: IconProps): JSX.Element {
+function Icon({icon: Icon, size, className, handleClick}: IconProps): JSX.Element {
     return (
         <Icon size={size} onClick={handleClick} className={className || ""}/>
     );

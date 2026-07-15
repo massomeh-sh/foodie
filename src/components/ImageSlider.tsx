@@ -133,25 +133,28 @@ function ImageSlider(): JSX.Element {
     }
 
     return (
-        <div className="my-5">
+        <div className="my-3">
             <div onPointerUp={handlePointerUp}
                  onPointerDown={handlePointerDown}
                  onPointerMove={handlePointerMove}
                  onPointerCancel={handlePointerCancel}
                  onTransitionEnd={handleTransitionEnd}
                  ref={sliderRef}
-                 className={`flex flex-col gap-1 w-full h-100 overflow-hidden touch-pan-y select-none ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}>
+                 className={`flex flex-col gap-1 w-full h-[280px] md:h-[380px] lg:h-[450px] overflow-hidden touch-pan-y select-none ${isDragging ? "cursor-grabbing" : "cursor-grab"} rounded-lg`}>
                 <div className={`flex ${hasTransition ? "transition-transform duration-500" : ""} ease-in-out`}
                      style={{transform: `translateX(-${(currentImage * 100) - dragOffset}%)`}}>
                     {sliderImage.map((image: Slide, index) => (
-                        <img draggable={false} key={index} src={image.src} alt={image.name}
-                             className="object-cover min-w-full h-100 select-none pointer-events-none"/>))}
+                        <div key={index} className="relative min-w-full h-[280px] md:h-[380px] lg:h-[450px]">
+                            <img draggable={false} src={image.src} alt={image.name}
+                                 className="object-cover w-full h-full select-none pointer-events-none"/>
+                            <div className="absolute inset-0 bg-black/10"/>
+                        </div>))}
                 </div>
             </div>
             <div className="relative mt-6">
-                <p className="absolute right-1/2 translate-x-1/4 flex justify-center gap-5">
+                <p className="absolute left-1/2 -translate-x-1/2 flex gap-5">
                     {images.map((_, index: number) => (<button key={index} onClick={() => handleClickOnDot(index)}
-                                                               className={`${index === dotPos ? "w-5 bg-primary" : " w-3 h-3 bg-gray-200"} rounded-full`}/>))}
+                                                               className={`${index === dotPos ? "w-5 h-3 bg-primary" : " w-3 h-3 bg-gray-200"} rounded-full`}/>))}
                 </p>
             </div>
         </div>
