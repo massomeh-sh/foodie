@@ -21,15 +21,15 @@ function Header(): JSX.Element {
                 <h1 className="text-primary font-black text-shadow-sm text-2xl">Foodie</h1>
             </div>
             <div className="flex items-center">
-                <div className="relative">
+                <div className="relative mr-4">
                     <Icon icon={IoSearch} size={12}
                           className="absolute top-1/2 -translate-y-1/2 left-4 text-secondary-text pointer-events-none"/>
                     <SearchInput/>
                 </div>
-                <nav onClick={showCart} className="relative px-4 py-3">
+                <nav onClick={showCart} className="relative py-3">
                     <Icon icon={LuShoppingCart} size={20} className="cursor-pointer"/>
                     <span
-                        className="absolute top-1.5 right-1 h-5 w-5 flex justify-center items-center text-xs leading-none bg-primary text-white rounded-full">{cartItems.length}</span>
+                        className="absolute top-1 -right-2 h-5 w-5 flex justify-center items-center text-xs leading-none bg-primary text-white rounded-full">{cartItems.length}</span>
                 </nav>
             </div>
         </header>
