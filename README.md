@@ -1,75 +1,172 @@
-# React + TypeScript + Vite
+# 🍔 Foodie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+### Discover Delicious Food, Beautifully.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Modern food discovery web application built with **React**, **TypeScript**, **Tailwind CSS**, and **Vite**.
 
-## React Compiler
+<br/>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![React](https://img.shields.io/badge/React-19-20232A?style=for-the-badge\&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge\&logo=typescript)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge\&logo=tailwind-css)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge\&logo=vite)
 
-## Expanding the ESLint configuration
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ About
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Foodie** is a modern and responsive food browsing application designed to provide a clean, elegant, and enjoyable user experience.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The project was built to practice modern frontend development using React's component architecture, TypeScript for type safety, and Tailwind CSS for fast and scalable styling.
 
+---
+
+## 🌟 Features
+
+* 🍕 Responsive layout
+* 🔍 Search foods
+* 🍔 Food cards
+* 🏷️ Categories
+* 🎨 Modern UI
+* ⚡ Fast performance with Vite
+* 💻 Reusable React Components
+* 📱 Mobile First Design
+* 🧹 Clean code structure
+* ♿ User-friendly interface
+
+---
+
+## 🖼️ Preview
+
+> Replace these images with screenshots from your project.
+
+<p align="center">
+
+<img src="./public/preview-1.png" width="800"/>
+
+<br/><br/>
+
+<img src="./public/preview-2.png" width="800"/>
+
+</p>
+
+---
+
+## 🛠️ Tech Stack
+
+| Frontend | Styling      | Language   | Build Tool |
+| -------- | ------------ | ---------- | ---------- |
+| React 19 | Tailwind CSS | TypeScript | Vite       |
+
+---
+
+## 📁 Folder Structure
+
+```text
+src
+│
+├── assets
+├── components
+├── hooks
+├── types
+├── data
+├── utils
+│
+├── App.tsx
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone the repository
 
+```bash
+git clone https://github.com/massomeh-sh/foodie.git
 ```
+
+Navigate to the project
+
+```bash
+cd foodie
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
+
+```bash
+npm run dev
+```
+
+Build production version
+
+```bash
+npm run build
+```
+
+---
+
+## 🎯 Future Plans
+
+* ❤️ Favorite Foods
+* 🛒 Shopping Cart
+* 🌙 Dark Mode
+* 🌐 API Integration
+* 🔐 User Authentication
+* ⭐ Rating System
+* 📄 Food Details Page
+* ❤️ Wishlist
+
+---
+
+## 📈 Performance
+
+* ⚡ Vite Powered
+* 📱 Fully Responsive
+* 🧩 Component Based
+* 🎨 Utility First Styling
+* 🛡️ Type Safe Development
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+If you have ideas for improvements, feel free to:
+
+* Fork the project
+* Create a feature branch
+* Commit your changes
+* Push your branch
+* Open a Pull Request
+
+---
+
+## 👩‍💻 Author
+
+### **Massomeh Shahhosseinian**
+
+GitHub
+
+**https://github.com/massomeh-sh**
+
+---
+
+<div align="center">
+
+### ⭐ If you like this project, don't forget to leave a Star!
+
+Made with ❤️ using React & TypeScript
+
+</div>
